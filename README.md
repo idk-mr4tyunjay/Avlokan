@@ -7,6 +7,49 @@ The basic feature includes
   - Event registrations
   - Event updates
 
+# College Event Management Portal
+
+Welcome to the College Event Management Portal! This web application aims to provide a platform for students and clubs in our college to manage and participate in various events, competitions, seminars, and more.
+
+## Features
+
+### Event Listings
+- View all upcoming events, competitions, seminars, and other activities organized by clubs in the college.
+
+### Club Registration
+- Clubs can register themselves on the portal.
+- Provide details such as club description, photos, contact information, and more.
+
+### Event Creation
+- Clubs can create and manage events.
+- Include event details such as description, date, time, venue, registration forms, and more.
+
+### User Registration
+- Students can register on the portal.
+- Create profiles and indicate their interests to receive personalized event recommendations.
+
+### Club Following
+- Students can follow clubs they are interested in.
+- Receive updates and notifications about club activities.
+
+### Mini Club Creation
+- Students can create their own mini clubs within the portal.
+- Form groups based on shared interests and organize activities.
+
+### Event Registration
+- Students can easily register for events through the portal.
+- Streamlined registration process for better participation.
+
+### Drive Creation
+- Clubs can create drives for recruitment, volunteer opportunities, and more.
+- Reach out to interested students and gather support for club initiatives.
+
+## Technologies Used
+- Frontend: 
+- Backend: 
+- Database:
+
+
 
 ****************************************************
 # Backend:
