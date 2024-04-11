@@ -3,7 +3,6 @@ package com.EventBackEnd.EventMan.Entities;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -14,18 +13,18 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 @Table(name = "college_user")
-public class college_user {
+public class College_user {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
     @Column(name = "enrollement_id",nullable = false)
-    String enrollement_id;
-    String first_name;
-    String last_name;
-    String email;
-    String password;
+    private String enrollement_id;
+    private String first_name;
+    private String last_name;
+    private String email;
+    private String password;
     @Temporal(TemporalType.TIMESTAMP)
     @CreationTimestamp
-    Date signup_date;
+    private Date signup_date;
 
 }
