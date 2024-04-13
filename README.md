@@ -70,9 +70,13 @@ Welcome to the College Event Management Portal! This web application aims to pro
 ****************************************************
 # Rest API:
 
-> For college User Sign up
+> For Signup college Student 
   - The Request type is post
   - The API Url is : http://localhost:8080/avlokan/college-user
+
+> For SignIn College Student
+  - The Request type is post
+  - The API Url is: http://localhost:8080/avlokan/login-student
 
 
 ====================================================
