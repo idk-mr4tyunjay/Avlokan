@@ -25,19 +25,6 @@ public class CollegeUserLogic {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-//    public ResponseEntity<String> authentication(LoginStudent loginStudent) throws Exception{
-//        BCryptPasswordEncoder crypt = new BCryptPasswordEncoder();
-//        Optional<College_user> isUser = collegeUserRepo.findByEmail(loginStudent.getEmail());
-//
-//        if(isUser.isPresent()){
-//            College_user user = isUser.get();
-//            if(crypt.matches(loginStudent.getPassword(), user.getPassword())){
-//                return ResponseEntity.ok().body("{\"message\": \"Successfully logged in\", \"email\": \"" + loginStudent.getEmail() + "\"}");
-//            }
-//        }
-//        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("{\"error\": \"Unauthorized\"}");
-//    }
-
     public ResponseEntity<String> authentication(LoginStudent loginStudent) throws Exception{
         try{
             userDetailsService.loadUserByUsername(loginStudent.getEmail());
