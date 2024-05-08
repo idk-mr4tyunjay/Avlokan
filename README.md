@@ -73,10 +73,34 @@ Welcome to the College Event Management Portal! This web application aims to pro
 > For Signup college Student 
   - The Request type is post
   - The API Url is : http://localhost:8080/avlokan/college-user
+  
+  - Parameters:
+  -- {
+    "email":"xyz@gmail.com",
+    "enrollement_id":"12345",
+    "first_name":"xyz",
+    "last_name":"abc",
+    "password":"yxa"
+    }
 
 > For SignIn College Student
   - The Request type is post
   - The API Url is: http://localhost:8080/avlokan/login-student
+
+  - Parameters:
+  {
+    "email":"xyz@gmail.com",
+    "password":"xyz"
+  }
+
+> For fetching Clubs
+  - The request type is Get
+  - http://localhost:8080/avlokan/get-clubs
+
+> For fetching events
+  - The request type is Get
+  - http://localhost:8080/avlokan/all-events
+
 
 
 ====================================================
