@@ -19,9 +19,10 @@ public class Event_details {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String event_name;
-    Date date_created;
+    Date associated_dates;
     Date event_date;
     String description;
     String event_type;
     String club_host;
+    String contact;
 }
