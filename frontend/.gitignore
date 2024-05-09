@@ -13,7 +13,6 @@ dist-ssr
 *.local
 login.jsx
 signup.jsx
-LandingPage/
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
