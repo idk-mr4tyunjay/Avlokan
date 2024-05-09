@@ -24,5 +24,4 @@ public class Event_details {
     String description;
     String event_type;
     String club_host;
-    String event_images;
 }
