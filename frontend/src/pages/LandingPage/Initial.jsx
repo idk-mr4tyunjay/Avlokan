@@ -43,7 +43,7 @@ function Initial() {
         })}
         <div className="start flex items-center gap-2">
           <p className="uppercase text-sm font-normal border-[2px] border-zinc-600 rounded-full py-2 px-3 text-zinc-900 font-Neue_Montreal">
-            Start the project
+            
           </p>
           <div className="border-zinc-600 border-[2px] rounded-full font-lighter w-9 h-9 flex justify-center items-center text-zinc-900">
             <span className="rotate-45">
