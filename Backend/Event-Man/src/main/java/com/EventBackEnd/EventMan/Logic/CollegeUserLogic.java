@@ -7,6 +7,7 @@ import com.EventBackEnd.EventMan.Security.SecurityConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -27,9 +28,10 @@ public class CollegeUserLogic {
 
     public ResponseEntity<String> authentication(LoginStudent loginStudent) throws Exception{
         try{
-            userDetailsService.loadUserByUsername(loginStudent.getEmail());
-            return ResponseEntity.ok().body("{\"message\": \"Successfully logged in\", \"email\": \"" + loginStudent.getEmail() + "\"}");
-
+           UserDetails userDetails = userDetailsService.loadUserByUsername(loginStudent.getEmail());
+//            return ResponseEntity.ok().body("{\"message\": \"Successfully logged in\", \"email\": \"" + loginStudent.getEmail() + "\"}");
+            String role = userDetails.getAuthorities().iterator().next().getAuthority();
+            return ResponseEntity.ok().body("{\"message\": \"Successfully logged in\", \"email\": \"" + loginStudent.getEmail() + "\", \"role\": \"" + role + "\"}");
         }catch (Exception ex){
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("{\"error\": \"Unauthorized\"}");
         }
@@ -39,6 +41,7 @@ public class CollegeUserLogic {
     public College_user addCollegeStudent(College_user user){
         String cryptPass = passwordEncoder.encode(user.getPassword());
         user.setPassword(cryptPass);
+        user.setRole("USER");
         return collegeUserRepo.save(user);
     }
 }
