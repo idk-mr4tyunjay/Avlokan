@@ -101,6 +101,23 @@ Welcome to the College Event Management Portal! This web application aims to pro
   - The request type is Get
   - http://localhost:8080/avlokan/all-events
 
+> For Adding Events
+  - The request type is Post
+  - http://localhost:8080/avlokan/add-events
+  - The Parameters:
+    {
+    "event_name": "Basketball Tournament",
+    "associated_dates": "2024-05-12",
+    "event_date": "2024-05-12",
+    "description": "xyz",
+    "event_type": "Tournament",
+    "club_host": "Basketball Club", 
+    "contact": "aarav2108@example.com,9876543218"
+    }
+
+> For Deleting Events:
+  - The request type is Delete
+  - http://localhost:8080/avlokan/delete/{EventId}
 
 
 ====================================================
