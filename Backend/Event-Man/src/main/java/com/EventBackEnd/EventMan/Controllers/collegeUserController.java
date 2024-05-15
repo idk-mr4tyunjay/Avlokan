@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/avlokan")
 @CrossOrigin("*")
@@ -22,5 +24,10 @@ public class collegeUserController {
     @PostMapping("/college-user")
     public College_user posting(@RequestBody College_user data){
         return collegeUserLogic.addCollegeStudent(data);
+    }
+
+    @GetMapping("/get-users")
+    public List<College_user> getAllUsers(){
+        return collegeUserLogic.getAllUsers();
     }
 }

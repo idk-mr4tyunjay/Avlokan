@@ -13,6 +13,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -43,5 +44,10 @@ public class CollegeUserLogic {
         user.setPassword(cryptPass);
         user.setRole("USER");
         return collegeUserRepo.save(user);
+    }
+
+//  For Fetching Users
+    public List<College_user> getAllUsers(){
+        return collegeUserRepo.findAll();
     }
 }

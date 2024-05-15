@@ -119,6 +119,10 @@ Welcome to the College Event Management Portal! This web application aims to pro
   - The request type is Delete
   - http://localhost:8080/avlokan/delete/{EventId}
 
+> For admin Taking users From the database
+  - The request type is Get
+  - http://localhost:8080/avlokan/get-users
+
 
 ====================================================
 
