@@ -3,8 +3,10 @@ package com.EventBackEnd.EventMan.Controllers;
 import com.EventBackEnd.EventMan.Entities.Event_details;
 import com.EventBackEnd.EventMan.Logic.EventDetailsLogic;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -18,16 +20,6 @@ public class EventDetailsController {
     @GetMapping("/all-events")
     public List<Event_details> getEvents(){
         return eventDetailsLogic.getAllEvents();
-    }
-
-    @PostMapping("/add-events")
-    public Event_details addEvent(@RequestBody Event_details events){
-        return eventDetailsLogic.addEvents(events);
-    }
-
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> deleteEvents(@PathVariable(value = "id") Long id){
-        return eventDetailsLogic.deleteEvents(id);
     }
 
 }

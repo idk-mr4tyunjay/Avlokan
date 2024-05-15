@@ -23,9 +23,7 @@ public class College_user {
     private String last_name;
     private String email;
     private String password;
-    private String role;
     @Temporal(TemporalType.TIMESTAMP)
     @CreationTimestamp
     private Date signup_date;
-
 }
